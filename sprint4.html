@@ -1,0 +1,89 @@
+<!--
+Utica Team Sprint 1
+Developers: Alexandr, Antonio, Necobi, David
+sprint1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTICA Radio Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles/sprint4.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            
+            <img src="images/P48_Logo.png" alt="P48 Logo" class="logo">
+            <h1>Radio Map</h1>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <h2>Explore different radio stations across the U.S.</h2>
+        </section>
+        <main class="main-section">
+            <aside class="left-panel">
+               <!-- <h3>Filters</h3>
+                <label for="marketSearch">Market Search</label>
+                <input id="marketSearch" type="text" placeholder="Search type (music, sports, etc)">
+                -->
+                <label for="stationSearch">Station Search</label>
+                <div class="search-wrapper">
+                    <input id="stationSearch" type="text" placeholder="Search for a Station">
+                    <div id="stationSuggestions" class="suggestions-box"></div>
+                </div>
+                
+                <div id="stationTags"></div>
+                
+                <label for="citysearch">City Search</label>
+                <div class="search-wrapper">
+                    <input id="citysearch" type="text" placeholder="Search for a City">
+                    <div id="citySuggestions" class="suggestions-box"></div>
+                </div>
+                <datalist id="cityList"></datalist>
+                
+                <label for="networkFilter" type="text">Networks</label>
+                <select id="networkFilter">
+                <option value="">Select A Network</option>
+                <option value="All">All Networks</option>
+                </select>
+
+                <div id="networkTags"></div>
+
+                <button type="button" id="reset">Reset Filters</button>
+            </aside>
+            <div class="map-wrapper">
+                <div id="map"></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-card">
+                <h4>About this map</h4>
+                <p>It allows users to explore different radio stations by location.</p>
+            </div>
+            <div class="footer-card">
+                <h4>How to use</h4>
+                <p>Use the filters on the left to filter stations.</p>
+                <p>Click on a marker to view radio information on the right.</p>
+            </div>
+            <div class="footer-card">
+                <h4>Data Source Used</h4>
+                <p>Map powered by Leaflet.</p>
+                <p>Radio data is currently hardcoded for sprint 1.</p>
+            </div>
+            <div class="footer-card">
+                <h4>Contact</h4>
+                <p>https://p48marketing.com/team/</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/sprint4.js"></script>
+</body>
+</html>
